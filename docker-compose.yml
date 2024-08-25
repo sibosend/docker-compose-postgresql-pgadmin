@@ -18,6 +18,7 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4:8.11
+    user: '$UID:$GID'
     ports:
       - 15433:80
     env_file:
