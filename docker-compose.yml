@@ -17,6 +17,9 @@ services:
       - ${PWD}/init.sql:/docker-entrypoint-initdb.d/init.sql
 
   pgadmin:
+    build:
+      context: .
+      dockerfile: Dockerfile-pgadmin
     image: dpage/pgadmin4:8.11
     user: '$UID:$GID'
     ports:
